@@ -5,7 +5,6 @@ print(bal)
 bals = input("Задание 1. Веедите число: ")
 print(f"Вы ввели {bals}")
 
-
 SEKONDTOH = 360
 SEKONDTOMIN = 60
 secondTime = int(input("Задание 2. Введите время в секундах: "))
