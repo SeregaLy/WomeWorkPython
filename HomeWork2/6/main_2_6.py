@@ -40,5 +40,4 @@ while positionNumber <= products:
          'количество': cardProduct.get('количество'),
          'ед': cardProduct.get('ед')})
 print(collectorProduct)
-while positionNumber <= products:
-    None
+
