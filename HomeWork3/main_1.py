@@ -5,9 +5,9 @@
 
 def input_num(str_num, param_zero=999999):
     while True:
-        getNumber = input("Введите целое положительное число: ")
-        if getNumber.isdigit():
-            return getNumber
+        get_number = input("Введите целое положительное число: ")
+        if get_number.isdigit():
+            return get_number
 
 
 def oper(dividend, divisor):
