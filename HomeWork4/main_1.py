@@ -4,3 +4,16 @@
 # формулу: (выработка в часах*ставка в час) + премия. Для выполнения расчета
 # для конкретных значений необходимо запускать скрипт с параметрами.
 
+from sys import argv
+
+name, time, salary, bonus = argv
+try:
+    time = int(time)
+    salary = int(salary)
+    bonus = int(bonus)
+    result = time * salary + bonus
+    print(f'заработная плата сотрудника  {result}')
+except ValueError:
+    print('один из аргументов имеет не числовой формат')
+
+# python main_1.py 5 6 8
