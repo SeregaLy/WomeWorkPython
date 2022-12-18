@@ -30,7 +30,7 @@ class Position(Worker):
         вывод имя + фамилия
         :return:
         '''
-        return self.name + ' ' + self.surname
+        return  self.name + " " + self.surname
 
     def get_total_income(self):
         '''
@@ -40,9 +40,11 @@ class Position(Worker):
         return self._income.get('wage') + self._income.get('bonus')
 
 
-user_one = Position(argv)
-print(user_one.get_full_name())
-print(user_one.position)
-print(user_one.get_total_income())
+SCRIPT_NAME, name_, surname_, position_, wage_, bonus_ = argv
+user_one = Position(name_, surname_, position_, wage_, bonus_)
+print(f"Сотрудник {user_one.get_full_name()}")
+print(f"Имеет должность {user_one.position}")
+print(f"Текущая зарплата составляет {user_one.get_total_income()}")
 
-#python main_3_7.py "Vasia", "Pipkin", "Gooroo", 50000, 2000000
+
+
