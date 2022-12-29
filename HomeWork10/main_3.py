@@ -21,5 +21,5 @@ if __name__ == "__main__":
     logger2 = Logger()
     assert logger1 is logger2
 
-print(f"logger1 is logger1 {logger1 is logger1}")
-print(f"logger1 is logger1 {logger2 is logger1}")
+print(f"logger1 is logger1  {logger1 is logger1}")
+print(f"logger1 is logger1  {logger2 is logger1}")
