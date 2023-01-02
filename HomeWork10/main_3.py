@@ -11,15 +11,22 @@ class Singleton(type):
         return cls._instance
 
 
-class Logger(metaclass=Singleton):
+class LoggerY(metaclass=Singleton):
+    def __init__(self, text):
+        self.text = text
+class LoggerX(metaclass=Singleton):
     def __init__(self, text):
         self.text = text
 
-
-logger1 = Logger('елка')
-logger2 = Logger('Привет')
+logger1 = LoggerY('елка')
+logger2 = LoggerY('Привет')
+logger3 = LoggerX('Привет')
 print(logger1)
 print(logger2)
-print('Получили ссулку на одну область памяти')
-print(f"logger1 is logger1  {logger1 is logger1}")
-print(f"logger1 is logger1  {logger2 is logger1}")
+print('Получили ссылку на одну область памяти')
+print(logger3)
+print('содержание одинаковое, а вот ссылка на область памяти другая')
+print(f'logger1 is logger1  {logger1 is logger1}')
+print(f'logger1 is logger2  {logger2 is logger1}')
+print(f'logger2 is logger3  {logger2 is logger3}')
+
