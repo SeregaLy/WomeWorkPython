@@ -14,9 +14,12 @@ class Singleton(type):
 class LoggerY(metaclass=Singleton):
     def __init__(self, text):
         self.text = text
+
+
 class LoggerX(metaclass=Singleton):
     def __init__(self, text):
         self.text = text
+
 
 logger1 = LoggerY('елка')
 logger2 = LoggerY('Привет')
@@ -29,4 +32,3 @@ print('содержание одинаковое, а вот ссылка на о
 print(f'logger1 is logger1  {logger1 is logger1}')
 print(f'logger1 is logger2  {logger2 is logger1}')
 print(f'logger2 is logger3  {logger2 is logger3}')
-
