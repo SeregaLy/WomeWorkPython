@@ -9,11 +9,10 @@ class Singleton(type):
 
 
 class PresidentCar(metaclass=Singleton):
-    def __init__(self,  name):
-        self.text = name
-
+    def __init__(self, name):
+        self.name = name
     def __str__(self):
-        return str(self.name)
+        return f'{self.name} президента едет во главе кортежа'
 
 class Car:
     # atributes
@@ -83,7 +82,7 @@ class PoliceCar(Car):
 
 
 Pytin = PresidentCar('Танк')
+
 print(Pytin)
-Pytin = list(map(str, Pytin))
 Medvedev = PresidentCar('Оранжевая Калина')
 print(Medvedev)
